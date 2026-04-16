@@ -15,6 +15,13 @@
 ```bash
 git clone [https://github.com/hanmingbai/mimic_distill_walk.git](https://github.com/hanmingbai/mimic_distill_walk.git)
 ```
+```bash
+cd mimic_distill_walk
+pip install -e .
+
+cd rsl_rl
+pip install -e .
+```
 
 本项目采用 Teacher-Student 蒸馏架构，请按顺序执行以下步骤：
 1. 教师模型训练 (Teacher Training)
