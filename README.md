@@ -6,10 +6,9 @@
 
 ## 🛠️ 环境要求
 
-- **Simulator**: [Isaac Lab](https://github.com/isaac-sim/IsaacLab) / Isaac Sim 4.0+
+- **Simulator**: [Isaac Lab 2.3.2](https://github.com/isaac-sim/IsaacLab) / Isaac Sim 5.1
 - **Base Framework**: [BeyondMimic (whole_body_tracking)](https://github.com/HybridRobotics/whole_body_tracking)
 - **Robot**: Unitree G1 (29 DoF)
-- **Environment**: Ubuntu 22.04 + ROS2 Humble
 
 ## 🚀 部署与安装
 ```bash
@@ -53,7 +52,6 @@ teacher.model_path = "/home/{user_name}/legged_lab/logs/beyondmimicplus/model_xx
 
 执行蒸馏训练。学生模型将在教师模型的指导下，学习更稳健、更利于实机迁移的控制策略。
 
-# 在框架根目录下运行
 ```bash
 python scripts/rsl_rl/train.py \
     --task Legged-Lab-BeyondMimicPlusDistill-Flat-G1-v0 \
@@ -61,17 +59,12 @@ python scripts/rsl_rl/train.py \
     --headless
 ```
 
-部署与验证 (Deployment)
+# 部署与验证 (Deployment)
 Sim-to-Sim 验证
 在真机部署前，建议在以下物理引擎中进行交叉验证：
+Unitree Mujoco: 参考 unitree_mujoco 进行环境搭建。
+Deployment SDK: 适配 unitree-rl-lab 部署框架，实现从仿真到实机的平滑迁移。
 
-    Unitree Mujoco: 参考 unitree_mujoco 进行环境搭建。
-
-    Deployment SDK: 适配 unitree-rl-lab 部署框架，实现从仿真到实机的平滑迁移。
-
-模型导出
-
-训练完成后，使用导出脚本将 .pt 权重转换为 ONNX 或部署所需的格式。
-
+# 感谢开源
 本研究基于 BeyondMimic 框架开发，感谢相关团队在全身运动追踪领域的开源贡献。
 
