@@ -60,10 +60,11 @@ python scripts/rsl_rl/train.py \
 ```
 
 # 部署与验证 (Deployment)
-Sim-to-Sim 验证
-在真机部署前，建议在以下物理引擎中进行交叉验证：
-Unitree Mujoco: 参考 unitree_mujoco 进行环境搭建。
-Deployment SDK: 适配 unitree-rl-lab 部署框架，实现从仿真到实机的平滑迁移。
+参考 unitree-rl-lab sim2sim部署框架
+Sim-to-Sim 验证效果
+```bash
+https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
+```
 
 # 感谢开源
 本研究基于 BeyondMimic 框架开发，感谢相关团队在全身运动追踪领域的开源贡献。
