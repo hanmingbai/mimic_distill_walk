@@ -73,3 +73,10 @@ tests/
 # TacSL sensor
 **/tactile_record/*
 **/gelsight_r15_data/*
+
+# other task
+source/legged_lab/legged_lab/tasks/amp/
+source/legged_lab/legged_lab/tasks/beyondmimic/
+source/legged_lab/legged_lab/tasks/beyondmimicplusvisiondistill/
+source/legged_lab/legged_lab/tasks/direct/
+source/legged_lab/legged_lab/tasks/manager_based/

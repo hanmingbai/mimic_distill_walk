@@ -1,0 +1,30 @@
+FSM:
+  _: # enabled fsms
+    Passive:
+      id: 1
+    FixStand:
+      id: 2
+    Velocity:
+      id: 3
+      type: RLBase
+  Passive:
+    transitions: 
+      FixStand: LT + A.on_pressed
+    mode: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    kd: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  FixStand:
+    transitions: 
+      Passive: LT + B.on_pressed
+      Velocity: start.on_pressed
+    kp: [400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400]
+    kd: [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+    ts: [0, 1, 3]
+    qs: [
+      [],
+      [0.0, 1.36, -2.65, 0.0, 1.36, -2.65, 0.0, 1.36, -2.65, 0.0, 1.36, -2.65],
+      [0., 0.8, -1.5, 0., 0.8, -1.5, 0., 0.8, -1.5, 0., 0.8, -1.5],
+    ]
+  Velocity:
+    transitions: 
+      Passive: LT + B.on_pressed
+    policy_dir: ../../../logs/rsl_rl/unitree_b2_velocity

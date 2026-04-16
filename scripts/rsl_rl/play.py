@@ -195,6 +195,29 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
 
     dt = env.unwrapped.step_dt
 
+    # # 打印关节PD参数
+    from termcolor import colored
+    robot = env.unwrapped.scene["robot"]
+    joint_names = robot.joint_names
+    stiffness = robot.data.default_joint_stiffness
+    damping = robot.data.default_joint_damping
+    joint_pos_term = env.unwrapped.action_manager.get_term("joint_pos")
+    raw_scale = joint_pos_term.cfg.scale
+    print(f"{'Joint Name':<30} | {'Stiffness':<10} | {'Damping':<10}")
+    print("-" * 55)
+    for i, name in enumerate(joint_names):
+        kp = stiffness[0, i].item() # 取第一个环境的参数
+        kd = damping[0, i].item()
+        action_scale = 0
+        print(f"{name:<30} | {kp:<10.2f} | {kd:<10.2f} | {action_scale}")
+    print(colored("="*50 + "\n", "green"))
+    # 打印关节index
+    print(f"关节名称排序: {joint_names}")
+    for i, name in enumerate(joint_names):
+        print(f"Index: {i} -> Name: {name}")
+    from legged_lab.robots.g1 import G1_ACTION_SCALE, G1_CYLINDER_CFG
+    print(f"<< --- ACTION_SCALE:{G1_ACTION_SCALE} --- >>")
+
     # reset environment
     obs = env.get_observations()
     timestep = 0
