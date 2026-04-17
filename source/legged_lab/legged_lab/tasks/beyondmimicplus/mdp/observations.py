@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 from isaaclab.utils.math import matrix_from_quat, subtract_frame_transforms
 
-from legged_lab.tasks.beyondmimic.mdp.commands import MotionCommand
+from legged_lab.tasks.beyondmimicplus.mdp.commands import MotionCommand
 
 if TYPE_CHECKING:
     from isaaclab.envs import ManagerBasedEnv
