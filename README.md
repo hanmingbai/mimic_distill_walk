@@ -47,7 +47,7 @@ python scripts/rsl_rl/train.py --task Legged-Lab-BeyondMimicPlus-Flat-G1-v0 --nu
 ```
 
 ### 手动配置蒸馏参数 (Critical Step)
-在启动学生模型训练前，必须手动指定教师模型的权重路径，配置文件的路径是`source/legged_lab/legged_lab/tasks/beyondmimicplusdistill/config/g1/agents/rsl_rl_distill_cfg.py`，找到变量teacher.model_path，将其路径更改为在第一阶段训练好的模型路径； 
+在启动学生模型训练前，必须手动指定教师模型的权重路径，配置文件的路径是`source/legged_lab/legged_lab/tasks/beyondmimicplusdistill/config/g1/agents/rsl_rl_distill_cfg.py`，找到变量teacher.model_path，将其路径更改为在第一阶段训练好的模型路径；  
 <br> 
 Before starting student model training, you must manually specify the weight path for the teacher model. The configuration file path is `source/legged_lab/legged_lab/tasks/beyondmimicplusdistill/config/g1/agents/rsl_rl_distill_cfg.py`. Locate the variable teacher.model_path and change its path to the path of the model trained in the first stage.
 ```bash
