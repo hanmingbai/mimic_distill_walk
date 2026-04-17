@@ -1,10 +1,10 @@
-# Mimic Distill Walk (based on BeyondMimic+)
+# Mimic Distill Walk
 
 > **核心目标**: achieve natural human-like walk instead of AMP (mode collaspe and too much reward engineering)
 
 ---
 
-## 环境要求
+## 环境
 
 - **Simulator**: [Isaac Lab 2.3.2](https://isaac-sim.github.io/IsaacLab/v2.3.2/source/setup/installation/pip_installation.html) / Isaac Sim 5.1
 - **Base Framework**: [BeyondMimic (whole_body_tracking)](https://github.com/HybridRobotics/whole_body_tracking)
@@ -26,11 +26,11 @@ cd rsl_rl
 pip install -e .
 ```
 
-## 训练流程
+## 训练
 本项目采用 Teacher-Student 蒸馏架构，请按顺序执行以下步骤：
 
 ### 教师模型训练 (Teacher Training)
-首先训练一个高质量的模仿学习策略作为教师模型。该阶段侧重于高精度的动作模仿，在根目录下运行：
+首先训练一个高质量的模仿学习策略作为教师模型，该阶段侧重于高精度的多动作模仿，在根目录下运行：
 ```bash
 cd mimic_distill_walk
 python scripts/rsl_rl/train.py --task Legged-Lab-BeyondMimicPlus-Flat-G1-v0 --num_envs=4096 --headless
@@ -56,6 +56,6 @@ python scripts/rsl_rl/train.py --task Legged-Lab-BeyondMimicPlusDistill-Flat-G1-
 https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
 ```
 
-# 致谢
+## 致谢
 本项目基于 BeyondMimic/Isaac Lab/RSL_RL 开发。
 
