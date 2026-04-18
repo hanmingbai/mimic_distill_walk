@@ -77,5 +77,5 @@ https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8
 - [ ] 增加其它机器人
 
 ## 致谢
-本项目基于 BeyondMimic/Isaac Lab/RSL_RL 开发，数据集来源于Nidia/Bones Studio的[seed数据集](https://huggingface.co/datasets/bones-studio/seed)。
+本项目基于 BeyondMimic/Isaac Lab/RSL_RL 开发，数据集来源于NVIDIA/Bones Studio的[seed数据集](https://huggingface.co/datasets/bones-studio/seed)。
 
