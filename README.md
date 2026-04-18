@@ -65,11 +65,17 @@ python scripts/rsl_rl/train.py --task Legged-Lab-BeyondMimicPlusDistill-Flat-G1-
 
 ## 部署 (Deployment)
 ### Sim-to-Sim
-参考 unitree-rl-lab里的sim-to-sim部署框架，仿真结果如视频所示
+参考 unitree-rl-lab里的sim-to-sim部署框架，仿真结果如b站视频所示，链接如下
 ```bash
 https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
 ```
 
+## 进度
+- [x] 发布代码和训练流程
+- [ ] sim2sim部署
+- [ ] 实现全向运动功能
+- [ ] 增加其它机器人
+
 ## 致谢
-本项目基于 BeyondMimic/Isaac Lab/RSL_RL 开发。
+本项目基于 BeyondMimic/Isaac Lab/RSL_RL 开发，数据集来源于Nidia/Bones Studio的[seed数据集](https://huggingface.co/datasets/bones-studio/seed)。
 
