@@ -67,13 +67,14 @@ python scripts/rsl_rl/train.py --task Legged-Lab-BeyondMimicPlusDistill-Flat-G1-
 ### Sim-to-Sim
 参考 unitree-rl-lab里的sim-to-sim部署框架，仿真结果如b站视频所示，链接如下
 ```bash
-https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
+【mimic和distillation训练拟人行走】 https://www.bilibili.com/video/BV19WdaBHE5w/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
+【mimic加蒸馏实现全向拟人行走】 https://www.bilibili.com/video/BV1iLdrBUEtn/?share_source=copy_web&vd_source=7d8106d98f5362a5125feb535fa58925
 ```
 
 ## 进度
 - [x] 发布代码和训练流程
 - [ ] sim2sim部署
-- [ ] 实现全向运动功能
+- [ ] 全向运动功能
 - [ ] 增加其它机器人
 
 ## 致谢
